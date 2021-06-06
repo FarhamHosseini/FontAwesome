@@ -1,5 +1,5 @@
 # FontAwesome
-===================
+
 Awesome Android library to use the [Font Awesome](https://fontawesome.com/icons) Icon collection in your android apps. This library contains the latest font awesome icon collection (**v6.0.2**).
 
 Referring Icon:
