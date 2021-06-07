@@ -3,6 +3,16 @@
 Awesome Android library to use the [Font Awesome](https://fontawesome.com/icons) Icon collection in your android apps. This library contains the latest font awesome icon collection (**v5.14.0 Pro**).
 
 
+How to Use
+-------------
+Include the `fontawesome` dependency in app's **build.gradle** and you are good to go.
+```gradle
+dependencies {
+    implementation 'com.apachat:fontawesome-android:5.14.0'
+}
+```
+
+
 Referring Icon:
 -----
 Font Awesome provides three set of icons **Regular**, **Solid** and **Brand**. All the icons can be referred from `Strings` resource file. For example,
