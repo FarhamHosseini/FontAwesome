@@ -63,7 +63,7 @@ fab.setImageDrawable(drawable);
 ```
 
 
-Displaying Icons in Menus (Bottom Navigation, Navigation Drawer, Toolbar etc.,)
+Displaying Icons in Menus (Bottom Navigation, Navigation Drawer, Toolbar and etc.)
 ----
 You can also display Font Awesome icons in UI elements those use menu file to render items. In the below example, font awesome icons are set to Navigation Drawer items.
 ```java
