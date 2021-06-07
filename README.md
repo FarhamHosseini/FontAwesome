@@ -5,12 +5,17 @@ Awesome Android library to use the [Font Awesome](https://fontawesome.com/icons)
 
 How to Use
 -------------
-Include the `fontawesome` dependency in app's **build.gradle** and you are good to go.
+Include the `fontawesome-android` dependency in app's **build.gradle** and you are good to go.
 ```gradle
 dependencies {
     implementation 'com.apachat:fontawesome-android:5.14.0'
 }
 ```
+
+
+Badge:
+-----
+[![Maven Central](https://img.shields.io/maven-central/v/com.apachat/fontawesome-android.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.apachat%22%20AND%20a:%22fontawesome-android%22)
 
 
 Referring Icon:
