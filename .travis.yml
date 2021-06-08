@@ -26,6 +26,6 @@ before_script:
 before_install: 
   - "chmod +x ./Android/gradlew"
 script: 
-  - "./Android/gradlew clean build connectedCheck --stacktrace"
+  - "./Android/gradlew tasks --scan"
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t 9166c3b5-d71b-4714-95aa-3fd6811d59dc
