@@ -15,7 +15,5 @@ android:
     - extra-android-m2repository
     - extra-android-support
     - sys-img-armeabi-v7a-android-30
-script: 
-  - "sudo ./gradlew build connectedCheck --stacktrace"
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t 9166c3b5-d71b-4714-95aa-3fd6811d59dc
