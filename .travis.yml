@@ -17,7 +17,6 @@ android:
     - sys-img-armeabi-v7a-android-24
 before_script:
   - android list targets
-  - jdk_switcher use oraclejdk8
   - echo no | android create avd --force -n test -t android-26
   - emulator -avd test -no-skin -no-audio -no-window &
   - adb wait-for-device
