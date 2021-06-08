@@ -42,7 +42,7 @@ before_script:
 script:
   - yes | ./Android/gradlew tasks --scan
   - yes | ./Android/gradlew tasks --all
-  - ./Android/gradlew assembleDebug
+  # - ./Android/gradlew assembleDebug
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
