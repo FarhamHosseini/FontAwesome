@@ -40,9 +40,9 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  - TERM=dumb ./Android/gradlew tasks --scan
-  - TERM=dumb ./Android/gradlew tasks --all
-  - TERM=dumb ./Android/gradlew assembleDebug
+  - yes | ./Android/gradlew tasks --scan
+  - yes | ./Android/gradlew tasks --all
+  - yes | ./Android/gradlew assembleDebug
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
