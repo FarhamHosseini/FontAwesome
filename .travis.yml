@@ -28,16 +28,21 @@ before_install:
   - "chmod +x ./Android/gradlew"
   - yes | sdkmanager "platforms;android-30"
 
+install:
+    - true
+
 before_script:
   - android list targets
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
+  - while [[ `adb shell pm path android` == 'Error'* ]]; do sleep 2; done
   - adb shell input keyevent 82 &
 
 script:
-  - "./Android/gradlew tasks --scan"
-  - "./Android/gradlew tasks --all"
+  - TERM=dumb ./Android/gradlew tasks --scan
+  - TERM=dumb ./Android/gradlew tasks --all
+  - TERM=dumb ./Android/gradlew assembleDebug
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
