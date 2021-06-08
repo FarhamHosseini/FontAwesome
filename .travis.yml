@@ -16,13 +16,16 @@ android:
     - extra-google-m2repository
     - sys-img-armeabi-v7a-android-24
 before_script:
-  - echo no | android create avd --force -n test -t android-26 --abi armeabi-v7a
-  - emulator -avd test -no-audio -no-window &
-  - android-wait-for-emulator
+  - android list targets
+  - jdk_switcher use oraclejdk8
+  - echo no | android create avd --force -n test -t android-24 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - adb wait-for-device
+  - while [[ `adb shell pm path android` == 'Error'* ]]; do sleep 2; done
   - adb shell input keyevent 82 &
 before_install: 
   - "chmod +x ./Android/gradlew"
 script: 
-  - "./Android/gradlew build connectedCheck --stacktrace"
+  - "./Android/gradlew clean build connectedCheck --stacktrace"
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t 9166c3b5-d71b-4714-95aa-3fd6811d59dc
