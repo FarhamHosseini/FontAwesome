@@ -16,6 +16,7 @@ dependencies {
 Badge:
 -----
 [![Maven Central](https://img.shields.io/maven-central/v/com.apachat/fontawesome-android.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.apachat%22%20AND%20a:%22fontawesome-android%22)
+[![codecov](https://codecov.io/gh/FarhamHosseini/FontAwesome/branch/main/graph/badge.svg?token=JI0ORPU7BP)](https://codecov.io/gh/FarhamHosseini/FontAwesome)
 
 
 Referring Icon:

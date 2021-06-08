@@ -36,9 +36,8 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  - "./Android/gradlew clean build"
-  - "./Android/gradlew test"
-  - "./Android/gradlew build check"
+  - "./Android/gradlew tasks --scan"
+  - "./Android/gradlew tasks --all"
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
