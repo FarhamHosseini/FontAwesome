@@ -18,7 +18,7 @@ android:
 before_script:
   - android list targets
   - jdk_switcher use oraclejdk8
-  - echo no | android create avd --force -n test -t android-24 --abi armeabi-v7a
+  - echo no | android create avd --force -n test -t android-26
   - emulator -avd test -no-skin -no-audio -no-window &
   - adb wait-for-device
   - while [[ `adb shell pm path android` == 'Error'* ]]; do sleep 2; done
