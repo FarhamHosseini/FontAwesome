@@ -25,7 +25,7 @@ android:
     - sys-img-armeabi-v7a-android-22
  
 before_install:
-  - chmod +x gradlew
+  - "chmod +x ./Android/gradlew"
   - yes | sdkmanager "platforms;android-30"
 
 before_script:
@@ -36,9 +36,9 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  - ./Android/gradlew clean build
-  - ./Android/gradlew test
-  - ./Android/gradlew build check
+  - "./Android/gradlew clean build"
+  - "./Android/gradlew test"
+  - "./Android/gradlew build check"
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
