@@ -26,7 +26,7 @@ android:
  
 before_install:
   - "chmod +x ./Android/gradlew"
-  - yes | sdkmanager "platforms;android-30"
+  - yes | sdkmanager "platforms;android-30" "build-tools;30.0.2"
 
 install:
     - true
@@ -42,7 +42,7 @@ before_script:
 script:
   - yes | ./Android/gradlew tasks --scan
   - yes | ./Android/gradlew tasks --all
-  - yes | ./Android/gradlew assembleDebug
+  - ./Android/gradlew assembleDebug
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
