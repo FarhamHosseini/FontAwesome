@@ -3,6 +3,9 @@ dist: trusty
 jdk: oraclejdk8
 os:
   - linux
+git:
+  depth: false
+  submodules: false
 env:
   global:
     - ANDROID_API_LEVEL=30
@@ -19,7 +22,7 @@ android:
     - sys-img-x86-android-$ANDROID_API_LEVEL
     - sys-img-armeabi-v7a-android-17
 before_script:
-  - echo no | android create avd --force -n test -t android-$ANDROID_API_LEVEL --abi armeabi-v7a -c 100M
+  - echo no | android create avd --force -n test -t android-30 --abi armeabi-v7a -c 100M
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
