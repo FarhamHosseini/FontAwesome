@@ -42,8 +42,8 @@ before_script:
 script:
   - yes | ./Android/gradlew tasks --scan
   - yes | ./Android/gradlew tasks --all
-  - ./Android/gradlew connectedCheck
   # - ./Android/gradlew assembleDebug
+  # - ./Android/gradlew connectedCheck
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
