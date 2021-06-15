@@ -8,7 +8,7 @@ How to Use
 Include the `fontawesome-android` dependency in app's **build.gradle** and you are good to go.
 ```gradle
 dependencies {
-    implementation 'com.apachat:fontawesome-android:5.14.0'
+    implementation 'com.apachat:fontawesome-android:5.14.1'
 }
 ```
 
